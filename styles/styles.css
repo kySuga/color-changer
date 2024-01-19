@@ -1,0 +1,103 @@
+/* Fonts
+=========== */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Inter:400,700&display=swap");
+
+:root {
+  --color-primary: #257;
+  --color-secondary: #f1f1f1;
+  --color-tertiary: #1a1a1a;
+  --ff-primary: "Inter", sans-serif;
+  --ff-secondary: "Open Sans", sans-serif;
+  --fw-reg: 400;
+  --fw-bold: 700;
+}
+
+body {
+  font-family: var(--ff-secondary);
+  background-color: var(--color-secondary);
+  color: var(--color-tertiary);
+}
+main {
+  min-height: calc(100vh - 3rem);
+  display: grid;
+  place-items: center;
+}
+ul {
+  list-style: none;
+}
+h1 {
+  font-family: var(--ff-primary);
+  color: var(--color-primary);
+}
+h2 {
+  padding: 1rem 5rem;
+  border: 0.1rem solid var(--color-secondary);
+  border-radius: 1rem;
+  border-style: dashed;
+  margin-block-end: 2rem;
+  font-family: var(--ff-primary);
+  background-color: var(--color-tertiary);
+  color: var(--color-secondary);
+}
+.btn {
+  padding: 1rem;
+  border: 0.1rem solid var(--color-tertiary);
+  border-radius: 1rem;
+  cursor: pointer;
+  font-weight: var(--fw-bold);
+  letter-spacing: 0.05rem;
+  background-color: var(--color-secondary);
+  color: var(--color-tertiary);
+}
+.container {
+  text-align: center;
+}
+
+/* Nav 
+=========*/
+nav {
+  display: grid;
+  align-items: center;
+  height: 3rem;
+  background-color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.nav__wrap {
+  width: 90vw;
+  max-width: 45rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.nav__list {
+  display: flex;
+  gap: 1.5rem;
+}
+nav a {
+  color: var(--color-tertiary);
+  transition: all 0.3s;
+}
+
+@media(max-width: 640px) {
+  h2 span {
+    display: block;
+  }
+}
+@media(min-width: 641px) {
+  h2 {
+    padding: 1rem 2rem;
+  }
+}
+@media(hover: hover) and (pointer: fine) {
+  nav a:hover,
+  nav a:focus-visible {
+    text-decoration: none;
+  }
+  .btn:hover,
+  .btn:focus-visible {
+    border-color: var(--color-secondary);
+    background-color: var(--color-tertiary);
+    color: var(--color-secondary);
+  }
+}
